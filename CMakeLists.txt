@@ -26,17 +26,20 @@ file(GLOB_RECURSE include_script
 #游戏系统部分
 file(GLOB_RECURSE game_system_script
         Source/GameSystem/*.cpp
-        Source/GameSystem/*.hpp)
+        Source/GameSystem/*.hpp
+        Source/GameSystem/*.h)
 
 #C++常用函数
 file(GLOB_RECURSE common_script
         Source/Common/*.cpp
-        Source/Common/*.hpp)
+        Source/Common/*.hpp
+        Source/Common/*.h)
 
 #渲染部分
 file(GLOB_RECURSE renderer_script
         Source/Renderer/*.cpp
-        Source/Renderer/*.hpp)
+        Source/Renderer/*.hpp
+        Source/Renderer/*.h)
 
 
 set(all_source
