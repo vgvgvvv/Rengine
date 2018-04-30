@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 find_package(OpenGL REQUIRED)
+find_package(Assimp REQUIRED)
 
 INCLUDE_DIRECTORIES(Source/Common)
 INCLUDE_DIRECTORIES(Source/GameSystem)
