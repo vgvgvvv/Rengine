@@ -9,6 +9,8 @@
 
 namespace ReEngine{
 
+    std::string Application::projectPath;
+
     std::string Application::GetProjectPath() {
         if(projectPath.empty()){
             char *path;
@@ -21,5 +23,6 @@ namespace ReEngine{
         }
         return projectPath;
     }
+
 
 }

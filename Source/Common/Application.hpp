@@ -9,7 +9,7 @@
 #include <string>
 
 namespace ReEngine{
-    class Application : public Singleton<Application>{
+    class Application {
 
     public:
 
@@ -19,12 +19,11 @@ namespace ReEngine{
          * 获取当前工程文件夹
          * @return
          */
-        std::string GetProjectPath();
+        static std::string GetProjectPath();
 
 
     private:
-        std::string projectPath;
-        std::string resourcesPath;
+        static std::string projectPath;
     };
 }
 

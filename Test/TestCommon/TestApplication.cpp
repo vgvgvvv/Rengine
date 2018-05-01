@@ -7,6 +7,6 @@
 
 int main(int argc, char **argv){
 
-    std::cout << ReEngine::Application::GetInstance().GetProjectPath() << std::endl;
+    std::cout << ReEngine::Application::GetProjectPath() << std::endl;
     return 0;
 }
