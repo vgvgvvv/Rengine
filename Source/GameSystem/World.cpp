@@ -55,7 +55,7 @@ namespace ReEngine{
             }
         }
         this->Uninit();
-        LogEngine::GetInstance().log("Uninit");
+        LogEngine::GetInstance().log("UnInit");
     }
 
     void World::Update() {
@@ -68,7 +68,7 @@ namespace ReEngine{
 
     void World::Uninit() {
         for(auto system : systemVector){
-            system->Uninit();
+            system->UnInit();
         }
     }
 

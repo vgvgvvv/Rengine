@@ -5,9 +5,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lpthread -D_GLIBCXX_USE_NANOSLEEP -g ")
 set(CMAKE_CXX_STANDARD  11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
 find_package(OpenGL REQUIRED)
 find_package(Assimp REQUIRED)
+find_package(Lua REQUIRED)
 
 INCLUDE_DIRECTORIES(Source/Common)
 INCLUDE_DIRECTORIES(Source/GameSystem)
@@ -41,21 +41,25 @@ file(GLOB_RECURSE renderer_script
         Source/Renderer/*.hpp
         Source/Renderer/*.h)
 
-
 set(all_source
         ${include_script}
         ${game_system_script}
         ${common_script}
-        ${renderer_script}
-        Source/Main.cpp)
+        ${renderer_script})
 
 
 set(all_lib
         ${OPENGL_LIBRARY}
+        ${LUA_LIBRARIES}
         glew
         glfw
         STB
         Assimp)
 
-add_executable(ReEngine ${all_source})
+#引擎入口
+add_executable(ReEngine ${all_source} Source/Main.cpp)
 target_link_libraries(ReEngine ${all_lib})
+
+#用于测试
+add_executable(TestReEngine ${all_source} Test/TestCommon/TestApplication.cpp)
+target_link_libraries(TestReEngine ${all_lib})

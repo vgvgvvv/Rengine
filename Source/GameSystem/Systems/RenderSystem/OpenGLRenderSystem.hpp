@@ -17,7 +17,7 @@ namespace ReEngine{
 
         void Update() override;
 
-        void Uninit() override;
+        void UnInit() override;
 
         bool GetShouldCloseWindow() override;
 

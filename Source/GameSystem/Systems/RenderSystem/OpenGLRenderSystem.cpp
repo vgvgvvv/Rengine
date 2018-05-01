@@ -31,7 +31,7 @@ namespace ReEngine{
         glfwPollEvents();
     }
 
-    void OpenGLRenderSystem::Uninit() {
+    void OpenGLRenderSystem::UnInit() {
         glfwTerminate();
         delete window;
     }

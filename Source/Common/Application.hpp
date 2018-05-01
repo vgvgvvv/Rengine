@@ -6,9 +6,10 @@
 #define RENGINE_APPLICATION_HPP
 
 #include <Utility/Singleton.hpp>
+#include <string>
 
 namespace ReEngine{
-    class Application : Singleton<Application>{
+    class Application : public Singleton<Application>{
 
     public:
 
@@ -20,11 +21,6 @@ namespace ReEngine{
          */
         std::string GetProjectPath();
 
-        /**
-         * 获取资源文件夹
-         * @return
-         */
-        std::string GetResourcesPath();
 
     private:
         std::string projectPath;

@@ -15,7 +15,7 @@ namespace ReEngine{
 
     }
 
-    void GameObjectSystem::Uninit() {
+    void GameObjectSystem::UnInit() {
 
     }
 
